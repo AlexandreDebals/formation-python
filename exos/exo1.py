@@ -9,6 +9,15 @@ Si le chiffre saisi est égal à guess_number
 on affiche "Bravo, tu as deviné !"
 '''
 print("*** EXO 1: chiffre mystère à deviner ***")
-guess_number = 42
+guessNumber = 42
 
 # votre code ici
+playerInput = int(input("Saisir un chiffre: "))
+
+if playerInput == guessNumber:
+  print("Bravo, tu as deviné !")
+else:
+  if playerInput > guessNumber:
+    print("C'est moins !")
+  else:
+    print("C'est plus !")
