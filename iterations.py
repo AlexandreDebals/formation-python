@@ -22,7 +22,7 @@ while counter2 > 0:
   counter2 -= 1 # décrémentation, équivalent à: counter = counter - 1
   
 # boucle for..in
-# boucle adaptée au parcourt de collection de données
+# boucle adaptée au parcours de collection de données
 # range renvoie ici un ensemble de 5 éléments
 for v in range(5):
   print(v)

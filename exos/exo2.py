@@ -12,3 +12,13 @@ print("*** EXO 2: chiffre mystère à deviner --- version 2 --- ***")
 guessNumber = 42
 
 # Votre code ici
+inputNumber = int(input("Devine le chiffre mystère: "))
+
+while inputNumber != guessNumber:
+  if inputNumber > guessNumber:
+    print("C'est moins !")
+  else:
+    print("C'est plus !")
+  inputNumber = int(input("Devine le chiffre mystère: "))
+
+print("Bravo !")
