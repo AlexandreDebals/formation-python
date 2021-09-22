@@ -1,14 +1,16 @@
+from tools import separator
+
 # une fonction est une unité code contenant une ou plusieurs
 # instructions pouvant être appelée autant de fois que souhaité
 # micro-organisme d'entrée/sortie
 
-def separator(character, times = 50):
-  row = ""
-  for n in range(times):
-    row += character
-  print(row)
+# def separator(character, times = 50):
+#   row = ""
+#   for n in range(times):
+#     row += character
+#   print(row)
 
-# separator("*", 30)
+separator("*", 30)
 # separator("-", 40)
 # separator("_")
 # separator('>')

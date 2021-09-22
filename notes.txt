@@ -1,0 +1,4 @@
+Module personnalisé, exemple: tools
+Module natif (core, built-in), exemple: random, platform, os
+
+Module communautaire

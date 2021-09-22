@@ -13,3 +13,23 @@ Exemples de valeurs saisies par l'utilisateur:
 => Somme des valeurs saisies: 20 (15,2,3)
 '''
 print("*** EXO 4: somme de saisies ***")
+
+def sumNumbers(numbers):
+  s = 0 # somme
+  for n in numbers:
+    s += n
+  return s
+
+values = []  # liste pour mémorisation des saisies
+
+while True:
+  userInput = int(input("Saisir un chiffre (0 pour quitter le programme): "))
+  if userInput == 0:
+    break # sortie de boucle immédiate
+  else:
+    values.append(userInput) # ajout de la valeur saisie dans la liste
+
+#valuesFormatted = str(values).replace("[", "(").replace("]",")")
+valuesFormatted = "(valeurs saisies: " + str(values).strip("[]") + ")"
+
+print("Somme des valeurs saisies: ", sumNumbers(values), valuesFormatted)
