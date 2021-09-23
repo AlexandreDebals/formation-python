@@ -11,3 +11,21 @@ ex:
 Le fichier missing.png devra être ignoré
 '''
 print("*** EXO 5: flags => flagsBis ***")
+
+import os, shutil
+
+srcDir = "flags"
+dstDir = "flagsBis"
+
+if not os.path.exists(dstDir):
+  os.mkdir(dstDir)
+  print("Dossier %s créé" % dstDir)
+
+
+for f in os.listdir(srcDir):
+  if not f == "missing.png":
+    shutil.copyfile(
+      srcDir + "/" + f, 
+      dstDir + "/" + f[:2].upper() + ".png"
+    )
+    print("Drapeau %s copié et renommé" % f)

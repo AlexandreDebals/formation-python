@@ -2,3 +2,14 @@ Module personnalisé, exemple: tools
 Module natif (core, built-in), exemple: random, platform, os
 
 Module communautaire
+
+Langage procédural: C
+Langage orienté objet: Java, C++
+Langage multi-paradigme: procédural, oo - Python, JavaScript, PHP (OO, depuis 5.3)
+
+POO => création des classes (classifier/organiser)
+
+Classe => objets
+Classe: plan de construction
+
+Classe Student
