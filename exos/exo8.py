@@ -1,15 +1,18 @@
 '''
 *** EXO 8: Heath Check ***
-Créer un programme qui, à partir du fichier websites.txt
-vérifie que chacun des sites listées répond
-à raison d'une requête toutes les n secondes
+Créer un programme qui, à partir du fichier websites.txt,
+vérifie que chacun des sites listées répond à la requête.
 
-la périodicité sera fournie en entrée par l'utilisateur
+Les sites (serveurs) seront interrogés toutes les n secondes.
 
-Un fichier de log contiendra:
-- la date de la requpete
+la périodicité (n) sera fournie en entrée par l'utilisateur
+
+On produira en sortie un fichier de log "health.log" qui contiendra:
+- la date de la requête
 - l'url interrogée
 - le status code obtenu ou une indication d'erreur en cas de non réponse
+
+Il faudra éviter d'écraser le fichier de log
 '''
 print("*** EXO 8: Health Check ***")
 
