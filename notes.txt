@@ -1,7 +1,10 @@
 Module personnalisé, exemple: tools
 Module natif (core, built-in), exemple: random, platform, os
+Module communautaire: pypi.org
 
-Module communautaire
+pip: gestionnaire de packages
+pip install [moduleName]
+
 
 Langage procédural: C
 Langage orienté objet: Java, C++
@@ -13,3 +16,35 @@ Classe => objets
 Classe: plan de construction
 
 Classe Student
+
+
+
+
+M1 <=> M2
+
+HTTP (protocole de comm, haut niveau - 7)
+
+Serveur HTTP (Serveur Web) <=> Client HTTP
+
+Apache <=> Chrome
+
+Méthodes HTTP : GET, POST
+
+METHOD URL
+GET https://pypi.org/project/requests/
+
+Request
+  URL
+  Method
+  Headers
+  (Body)
+
+Response
+  Status Code: 200, 404, 301, 401
+  Headers
+  Body
+
+Webdev
+  Front (end): HTML, CSS, JavaScript (react, angular, vuejs)
+  Back (end): Java, PHP, Python, JavaScript
+  Full-Stack: Front + Back

@@ -1,5 +1,7 @@
 import platform, os
 import tools
+import mypackage.subpackage.subdemo as subd
+from colorama import Fore, Style
 
 # print(platform.processor())
 # print(platform.system())
@@ -24,5 +26,19 @@ import tools
 # countries = ["allemagne", "italie", "france"]
 # countriesBis = [ c[:2].upper() for c in countries ]
 
-tools.randSeparator()
-tools.example()
+# tools.randSeparator()
+# tools.example()
+
+#subd.subdemoprint() # exécution d'une fonction placée dans un sous-package importé et aliasé
+
+# utilisation du module colorama afin
+# d'afficher le texte en vert
+# RESET_ALL permet de retrouver la couleur par défaut
+
+#print(Fore.GREEN + 'Bravo !' + Style.RESET_ALL)
+#print('Tu es le meilleur !')
+
+s = "n\n\n<!DOnCTYPE n"
+
+s2 = s.replace("n", "x").replace("\n", "---")
+print(s2)
