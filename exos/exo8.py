@@ -17,3 +17,37 @@ Il faudra éviter d'écraser le fichier de log
 print("*** EXO 8: Health Check ***")
 
 # votre code ici
+import time, datetime
+import requests
+import sys
+
+startTime = time.time()
+logFilePath = "health.log"
+
+#sleepTime = int(input("Entrez le temps en seconde entre deux requêtes: "))
+#maxTime = 30 # temps d'exécution maximale du script
+
+# ToDo: vérifier que les arguments on été fournis à la commande
+# et qu'ils sont "acceptables" (convertibles en entier)
+sleepTime = int(sys.argv[1])
+maxTime = int(sys.argv[2])
+
+with open("websites.txt", "r") as sites:
+    websites = sites.read().splitlines()
+
+while True:
+    logFile = open(logFilePath, "a")
+    for w in websites:
+        newLogLine = ""
+        newLogLine += str(datetime.datetime.now()) + " " + w + " "
+        #print(newLogLine)
+        try:
+            response = requests.get(w)
+            newLogLine += str(response.status_code)
+        except:
+            newLogLine += "error when requesting the website"
+        logFile.write(newLogLine + "\n")
+    logFile.close()
+    time.sleep(sleepTime)
+    if time.time() - startTime > maxTime:
+        break

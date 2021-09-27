@@ -3,6 +3,7 @@ import tools
 import mypackage.subpackage.subdemo as subd
 from colorama import Fore, Style
 import time
+import sys
 
 # print(platform.processor())
 # print(platform.system())
@@ -47,3 +48,11 @@ import time
 # print("Bon...")
 # time.sleep(10)
 # print("...jour")
+
+# print(sys.argv)  # agv, liste d'arguments de la commande
+# for a in sys.argv:
+#   print(a)
+
+while True:
+  print("Coucou")
+  time.sleep(5)

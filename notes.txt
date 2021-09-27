@@ -26,7 +26,7 @@ HTTP (protocole de comm, haut niveau - 7)
 
 Serveur HTTP (Serveur Web) <=> Client HTTP
 
-Apache <=> Chrome
+Apache ou Nginx <=> Chrome
 
 Méthodes HTTP : GET, POST
 
@@ -46,5 +46,5 @@ Response
 
 Webdev
   Front (end): HTML, CSS, JavaScript (react, angular, vuejs)
-  Back (end): Java, PHP, Python, JavaScript
+  Back (end): Java, PHP, Python, JavaScript, ASP.NET, Ruby, etc.
   Full-Stack: Front + Back
