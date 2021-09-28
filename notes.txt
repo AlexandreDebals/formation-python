@@ -48,3 +48,30 @@ Webdev
   Front (end): HTML, CSS, JavaScript (react, angular, vuejs)
   Back (end): Java, PHP, Python, JavaScript, ASP.NET, Ruby, etc.
   Full-Stack: Front + Back
+
+Dev
+From scratch (on part de 0, pas de modules permettant l'accélération du dev)
+Framework: booster, un certain nombre de composant déjà fait/testés
+  PHP: Symfony, Laravel
+  Java: Spring
+  Python: Django, Flask
+  JavaScript: Express
+  Ruby: Ruby-on-Rails
+
+
+Response
+  texte brut
+  texte formaté
+    html => UI (User Interface)
+    xml
+    json => interropérabilité (échange de données entre applications)
+  binaires (image, pdf)
+
+
+API = Application Programming Interface
+
+Exemple: Flask dispose d'une API, expose une API = liste de fonctionnalités offertes
+
+API REST = 
+spécifique aux services web, 
+fournit un ensemble de routes = endpoints, CRUD: Create Read Update Delete
