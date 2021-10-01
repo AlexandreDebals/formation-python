@@ -1,0 +1,9 @@
+*** Docker Exos ***
+
+Exo1
+Créer une image docker-exo1.
+Cette image 
+  sera basée sur ubuntu bionic
+  devra inclure git ainsi que l'interpréteur python3
+Le démarrage d'un conteneur basé sur cette image devra exécuter un script python
+(ex: hello.py affichant "Hello from python") situé à l'intérieur du conteneur

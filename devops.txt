@@ -1,7 +1,0 @@
-https://www.youtube.com/watch?v=C_w7_5IQUvU
-
-- Qu'appelle-t-on Devops ?
-- C'est quoi un Dev ? Quelles sont ses problématiques, ses tâches métiers ?
-- C'est quoi un Op ? Quelles sont ses problématiques, ses tâches métiers ?
-- Quels peuvent être les "points de friction" entre ces deux métiers
-- Que propose le Devops ? Quelles fins et par quels moyens ?

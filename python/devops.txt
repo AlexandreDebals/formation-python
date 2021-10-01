@@ -1,0 +1,44 @@
+https://www.youtube.com/watch?v=C_w7_5IQUvU
+
+- Qu'appelle-t-on Devops ?
+- C'est quoi un Dev ? Quelles sont ses problématiques, ses tâches métiers ?
+- C'est quoi un Op ? Quelles sont ses problématiques, ses tâches métiers ?
+- Quels peuvent être les "points de friction" entre ces deux métiers
+- Que propose le Devops ? Quelles fins et par quels moyens ?
+
+
+Recueil et analyse des besoins
+Reflexion sur la manière de les satisfaire par l'outil informatique
+
+Machines (hard), logiciels (soft)
+Différents profils
+
+1/ Planification: chef de projet informatique, 
+compétence managériales et organisationnelles
+Découpage par lots/fonctionnalités
+Etablissement d'un planning
+Allocation des ressources humaines
+
+2/ Conception
+Code de l'application. Code source (texte)
+=> interprété/compilé => chargé en mémoire/traité par processeur
+Profil Dev
+
+3/ Déploiement (deploy/build)
+Attribution/apprivisionnement de RESSOURCES matérielles destinées à soutenir
+le fonctionnement de l'application
+ENVIRONNEMENT (de production)
+Profil Op (Admin Système/Réseau, Infra)
+
+
+Devops
+  Culture collaborative
+  Infrastructure (on-premise/sur-site ; cloud)
+  Code
+  Surveillance (Monitoring), métriques
+  Tests
+  Automatisation
+  Pipeline (CI/CD)
+  Cloud
+
+
