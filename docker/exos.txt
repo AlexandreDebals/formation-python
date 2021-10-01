@@ -7,3 +7,9 @@ Cette image
   devra inclure git ainsi que l'interpréteur python3
 Le démarrage d'un conteneur basé sur cette image devra exécuter un script python
 (ex: hello.py affichant "Hello from python") situé à l'intérieur du conteneur
+
+Exo2
+Ajouter à l'application webapp une route permettant d'obtenir la liste de tous les étudiants
+ayant obtenu la moyenne (note supérieure ou égale à 10/20). 
+Pour tester le bon fonctionnement de cette route, ajouter en base de données
+des étudiants avec des notes inférieures à la moyenne
