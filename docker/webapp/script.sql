@@ -12,3 +12,6 @@ create table if not exists student(
 insert into student (firstname, lastname, note) values ('Pamela', 'AFOUDA', 15);
 insert into student (firstname, lastname, note) values ('Pierre', 'CASTETS', 17.5);
 insert into student (firstname, lastname, note) values ('Alexandre', 'DEBALS', 19);
+insert into student (firstname, lastname, note) values ('Alessandro', 'NESTA', 8);
+insert into student (firstname, lastname, note) values ('Leonardo', 'DA VINCI', 2);
+insert into student (firstname, lastname, note) values ('Victor', 'MOYEN', 10);

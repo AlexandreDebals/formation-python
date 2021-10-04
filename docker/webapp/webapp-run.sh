@@ -1,0 +1,2 @@
+docker run --name webapp -d --network network_demo -p 8080:8080 -e MYSQL_HOST=sql1 -e MYSQL_PORT=3306 webapp:1
+docker run --name webapp2 -d --network network_demo -p 8081:8080 -e MYSQL_HOST=sql1 -e MYSQL_PORT=3306 webapp:1.1

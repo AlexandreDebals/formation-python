@@ -1,11 +1,18 @@
 from flask import Flask, render_template
 import mysql.connector # import du client mysql
-import json
+import json, os
+
+# accès aux variables d'environnement
+# permet plus de flexibilité concernant la connexion à la DB
+MYSQL_HOST = os.environ.get("MYSQL_HOST")
+MYSQL_PORT = os.environ.get("MYSQL_PORT")
 
 # connection au serveur mysql
 db = mysql.connector.connect(
-  host="localhost",
-  port=3307,
+  #host="sql1",
+  #port=3306,
+  host=MYSQL_HOST,
+  port=MYSQL_PORT,
   user="root",
   password="root",
   database="webapp"
@@ -35,6 +42,14 @@ def studentDetail(id):
   firstname, note = cursor.fetchall()[0]
   resp = f"{firstname} a obtenu la note de: {note}/20"
   return resp
+
+@app.route("/exo2")
+def exo2():
+  # on recherche les étudiants ayant obtenu au moins 10/20
+  cursor = db.cursor()
+  cursor.execute("select * from student where note >= 10")
+  students = cursor.fetchall()
+  return render_template("student.html", students=students)
 
 # démarrage du serveur
 app.run(host="0.0.0.0", port=8080)
