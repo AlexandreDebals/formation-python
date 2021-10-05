@@ -1,0 +1,15 @@
+*** Exos CI ***
+
+Créer un projet python Flask proposant une route "/square/<number>"
+une requête en GET sur cette route renverra le carré de la valeur passée dans l'url
+
+Le calcul du carré se fera par une fonction dédiée
+
+Rédiger un fichier de test unitaire portant sur cette fonction
+
+Le projet devra être hébergé dans un dépôt gitlab
+
+Rédiger une pipeline à trois phases
+  - build: téléchargement des dépendances (requirements.txt)
+  - run: exécution de l'application pendant 10 secondes + arrêt
+  - test: exécution de tests unitaires
