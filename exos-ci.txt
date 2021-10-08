@@ -1,5 +1,6 @@
 *** Exos CI ***
 
+1/
 Créer un projet python Flask proposant une route "/square/<number>"
 une requête en GET sur cette route renverra le carré de la valeur passée dans l'url
 
@@ -13,3 +14,16 @@ Rédiger une pipeline à trois phases
   - build: téléchargement des dépendances (requirements.txt)
   - run: exécution de l'application pendant 10 secondes + arrêt
   - test: exécution de tests unitaires
+
+2/ 
+Créer sur github un dépôt "exos-ci-2" réutilisant les mêmes sources que ce dépôt:
+https://gitlab.com/cdufour1/my-gatsby-website
+à l'exception du fichier .gitlab-ci.yml
+
+Recréer la pipeline CI/CD:
+- soit un créant sur votre serveur Jenkins un projet "Freestyle" avec les différentes étapes
+du CI/CD
+- soit en rédigeant un fichier Jenkinsfile qu'il faudra placer dans ce dépôt
+Dans les deux cas, le projet Jenkins sera nommé "exos-ci-2"
+
+Le build de ce projet sera déclenché manuellement
