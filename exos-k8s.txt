@@ -1,0 +1,5 @@
+*** Exos K8S ***
+Placer l'application visits (réaliser dans la formation docker) 
+dans le cluster minikube (namespace exos)
+- 1 déploiement pour l'application Flask
+- 1 déploiement pour l'application redis
