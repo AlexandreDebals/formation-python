@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      name: server-pod
+      labels:
+        app: server
+    spec:
+      containers:
+        - name: server
+          image: laithharb/server:v1
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-svc
+spec:
+  type: NodePort
+  selector:
+    app: server # cible la ressource (pod) ayant le label app:client
+  ports:
+    - port: 3300
+      targetPort: 3000 # cible l'application serveur conteneurisée dans le Pod
+      nodePort: 30008
+  

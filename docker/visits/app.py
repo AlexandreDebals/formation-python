@@ -21,7 +21,7 @@ def home():
     numVisits = 0
   numVisits = int(numVisits)
   r.set("visits", numVisits + 1)
-  return f'*** Nombre de visites: {numVisits} ***\n'
+  return f'--- Nombre de visites: {numVisits} ---\n'
 
 # démarrage du serveur
 app.run(host="0.0.0.0", port=8080)

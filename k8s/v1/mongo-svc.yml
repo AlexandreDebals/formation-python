@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-srv # utile pour la résolution DNS interne
+spec:
+  type: ClusterIP # type de service par défaut (à usage interne)
+  selector:
+    app: mongo
+  ports:
+    - name: db
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
