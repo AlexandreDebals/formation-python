@@ -1,0 +1,26 @@
+- name: Demo command et shell
+  hosts: dev
+
+  tasks:
+  - name: demo1
+    command: pwd
+    register: cmd_out # enregistrement du retour de l'exec du module command (objet contenant stdout, stderr, etc.)
+  
+  - debug: var=cmd_out.stdout
+
+  # sans "state management", on s'expose à une erreur de type File exists
+  # - name: demo2
+  #   command: mkdir toto # équivalent de file path=toto state=directory
+
+  - name: demo3
+    command: echo "coucou from command" > coucou_command.txt # l'opérateur de redirection de sortie est "neutralisé"
+    register: demo3_out
+  - debug: var=demo3_out
+
+  - name: demo4
+    shell: echo "coucou from shell" >> coucou_shell.txt
+
+  - copy: src=files/hello.sh dest=hello.sh mode=0777
+
+  - name: demo5
+    shell: ./hello.sh

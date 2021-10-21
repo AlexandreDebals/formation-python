@@ -1,0 +1,9 @@
+- name: Install
+  apt:
+    name: apache2
+    state: present
+
+- name: Run
+  service:
+    name: apache2
+    state: started

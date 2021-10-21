@@ -1,0 +1,10 @@
+- name: Projet1
+  hosts: dev
+  become: yes
+
+  roles:
+  - apache
+
+  tasks:
+  - name: command demo
+    command: echo "simple demo"

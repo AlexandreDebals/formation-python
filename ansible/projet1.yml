@@ -71,8 +71,28 @@
         user: '{{ user }}'
         key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 
+    # https://docs.ansible.com/ansible/latest/collections/community/mysql/mysql_db_module.html
     - name: Création de la base {{ user }}
-      
+      mysql_db:
+        login_unix_socket: /var/run/mysqld/mysqld.sock # connexion par socket
+        name: '{{ user }}'
+        state: present
+
+    - name: Création de l'utilisateur {{ user }} pour le serveur mysql
+      mysql_user:
+        login_unix_socket: /var/run/mysqld/mysqld.sock
+        name: '{{ user }}'
+        password: 'abc1234'
+        state: present
+        priv: 'aramis.*:ALL' # tous les droits sur toutes les tables de la base aramis
+      notify:
+      - restart-mysql
+        
+  handlers:
+  - name: restart-mysql
+    service:
+      name: mysql
+      state: restarted
 
     
               
