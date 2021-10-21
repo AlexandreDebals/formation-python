@@ -1,0 +1,25 @@
+- name: Demo
+  hosts: dev
+  tasks:
+    - name: Demo Ping
+      ping:
+
+    - name: Création dossier demo
+      file:
+        path: /tmp/demo
+        state: directory
+        mode: 0755
+
+    # tâche executée en tant que root. L'option -b de la commande ansible-playbook permet d'être également d'être root mais pour l'ensemble des tâches
+    - name: Création dossier demo2
+      become: yes # on devient l'utilisateur root pour cette tâche
+      file:
+        path: /tmp/demo2
+        state: directory
+        mode: 0755
+
+    - name: Désinstallation du serveur apache
+      become: yes
+      apt:
+        name: apache2
+        state: absent

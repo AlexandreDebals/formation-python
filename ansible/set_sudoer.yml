@@ -1,0 +1,10 @@
+- name: Configure Sudoer
+  hosts: all
+  become: yes
+  tasks:
+    - name: Supprime la demande de mot de passe pour le groupe sudo
+      lineinfile:
+        path: /etc/sudoers
+        regexp: '^%sudo'
+        line: '%sudo ALL=(ALL) NOPASSWD: ALL'
+        validate: 'visudo -cf %s' # validation syntaxique du fichier

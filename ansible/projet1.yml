@@ -1,0 +1,79 @@
+- name: Project1
+  hosts: dev
+  become: yes
+
+  vars:
+    user: aramis
+    group: developers
+  
+  tasks:
+    - name: Installe Apache + PHP + Mysql + PIP
+      apt: name={{ item }} state=latest
+      loop: ['apache2', 'php', 'libapache2-mod-php', 'mysql-server', 'php-mysql', 'pip']
+ 
+    - name: Installe PyMySQL
+      pip:
+        name: PyMySQL==1.0.2
+
+    - name: Démarre Apache + Mysql
+      service:
+        name: '{{ item }}'
+        state: started
+      loop: ['apache2', 'mysql']
+
+    - name: Modifie owner/group du docRoot Apache
+      file:
+        path: /var/www/html
+        owner: '{{ user }}'
+        group: '{{ group }}'
+    
+
+
+    # - name: Copie du fichier index.php
+    #   copy:
+    #     src: files/index.php
+    #     dest: /var/www/html
+    #     owner: '{{ user }}'
+    #     group: '{{ group }}'
+
+    # - name: Exemple de debug
+    #   debug:
+    #     #msg: "coucou {{ user }}"
+    #     msg: "{{ lookup('template', 'files/index.j2') }}"
+
+    - name: Création du fichier index.php (template)
+      template:
+        src: files/index.j2
+        dest: /var/www/html/index.php
+        owner: '{{ user }}'
+        group: '{{ group }}'
+
+    - name: Suppression du fichier index.html
+      file:
+        path: /var/www/html/index.html
+        state: absent
+
+    - name: Création du groupe {{ group }} # (vérif par less /etc/group)
+      group:
+        name: '{{ group }}'
+        state: present
+    
+    - name: Création de l'utilisateur {{ user }}
+      user:
+        name: '{{ user }}'
+        state: present
+        groups: '{{ group }}'
+        shell: /bin/bash
+
+    - name: Copie d'une clé RSA publique
+      when: user is defined # tâche exécutée conditionnellement
+      authorized_key:
+        user: '{{ user }}'
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+    - name: Création de la base {{ user }}
+      
+
+    
+              
+      
