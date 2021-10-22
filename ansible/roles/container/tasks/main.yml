@@ -1,0 +1,10 @@
+- name: Create Mariadb container
+  docker_container:
+    name: mariadb
+    image: mariadb
+    state: started
+    ports:
+      - 3306:3306
+    env:
+      MYSQL_ROOT_PASSWORD: 'abc123'
+      MYSQL_DATABASE: demo

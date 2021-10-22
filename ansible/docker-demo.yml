@@ -1,0 +1,18 @@
+# https://stackoverflow.com/questions/57821778/install-docker-on-ubuntu-using-ansible-with-python3
+
+- name: Docker Demo
+  hosts: victim
+
+  roles:
+  - docker
+  - container
+
+  # tasks:
+  # - docker_image:
+  #     name: hello-world
+  #     source: pull
+
+  # - docker_container:
+  #     name: hello-world
+  #     image: hello-world
+  #     state: started

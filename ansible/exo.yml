@@ -1,0 +1,40 @@
+- name: Exo
+  hosts: dev
+
+  tasks:
+  - name: Install nodejs/npm
+    become: yes
+    apt:
+      name: '{{ item }}'
+      state: latest
+    loop:
+    - nodejs
+    - npm
+  
+  - name: Clone app repo
+    git:
+      repo: https://gitlab.com/cdufour1/nodeapp.git
+      dest: /home/osboxes/nodeapp
+      force: yes
+
+  - name: Install deps
+    command:
+      cmd: npm install
+    args:
+      chdir: nodeapp/
+
+  - name: Copy script files
+    copy:
+      src: files/{{ item }}.sh
+      dest: nodeapp/
+      mode: 'u+x'
+    loop: ['start', 'stop']
+
+  - name: Start app
+    shell: cd nodeapp; /bin/bash start.sh
+
+  # possiblité d'exécuter les commandes start|stop directement par ansible
+  # ansible -i inventory.txt victim -m shell -a "cd nodeapp; /bin/bash stop.sh"
+  
+
+    

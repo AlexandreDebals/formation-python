@@ -1,7 +1,7 @@
 *** Exos Ansible ***
 
 1/
-Créer un playbook avec installation nodejs sur les machines cibles
+Créer un playbook avec installation de nodejs sur les machines cibles
 Ce playbook devra également exécuter une application nodejs dont les sources sont situées à
 cette addresse: https://gitlab.com/cdufour1/nodeapp
 Les machines cibles récupèreront les sources par git clone 
